@@ -31,7 +31,7 @@ The project is organized as follows:
 1. **Clone the Repository**:
 
    ```bash
-   git clone https://github.com/your-username/crypto-learning-hub.git
+   git clone https://github.com/Hari-hara7/crypto-learning-hub.git
 
 
 cd crypto-learning-hub
