@@ -5,8 +5,15 @@ import { motion } from "framer-motion";
 import { FaBitcoin, FaEthereum, FaCoins } from "react-icons/fa";
 import CryptoCard from "@/components/CryptoCard";
 
+// Define a type for the crypto data
+interface CryptoPrice {
+  symbol: string;
+  price: number;
+  change: number;
+}
+
 export default function HomePage() {
-  const [cryptoPrices, setCryptoPrices] = useState<any[]>([]);
+  const [cryptoPrices, setCryptoPrices] = useState<CryptoPrice[]>([]);
 
   useEffect(() => {
     // Fetching the live crypto prices from the backend API
@@ -78,7 +85,7 @@ export default function HomePage() {
           </motion.div>
         </div>
 
-        {/* Crypto Cards Section jj*/}
+        {/* Crypto Cards Section */}
         <motion.div
           className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8"
           initial="hidden"
