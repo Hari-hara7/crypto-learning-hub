@@ -26,7 +26,7 @@ export default function LearnPage() {
         {/* Tutorial 1 */}
         <div className="bg-gray-800 p-6 rounded-lg shadow-lg text-center">
           <FaBookOpen className="text-yellow-400 text-6xl mx-auto mb-4" />
-          <h2 className="text-2xl font-bold mb-2">Beginner's Guide</h2>
+          <h2 className="text-2xl font-bold mb-2">Beginner&apos;s Guide</h2>
           <p className="text-gray-300 mb-4">
             Get started with cryptocurrency trading and blockchain basics. Perfect for beginners!
           </p>
