@@ -1,6 +1,6 @@
 "use client";
 
-
+import Link from "next/link";
 
 export default function Footer() {
   return (
@@ -15,28 +15,27 @@ export default function Footer() {
         {/* Footer Navigation */}
         <ul className="flex space-x-6 mt-4 md:mt-0">
           <li>
-            <a href="/" className="hover:text-gray-400">
+            <Link href="/" className="hover:text-gray-400">
               Home
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="/learn" className="hover:text-gray-400">
+            <Link href="/learn" className="hover:text-gray-400">
               Learn
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="/community" className="hover:text-gray-400">
+            <Link href="/community" className="hover:text-gray-400">
               Community
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="/certifications" className="hover:text-gray-400">
+            <Link href="/certifications" className="hover:text-gray-400">
               Certifications
-            </a>
+            </Link>
           </li>
         </ul>
-</div>
-      
+      </div>
 
       {/* Sub-footer */}
       <div className="border-t border-gray-700 mt-6 pt-4 text-sm text-gray-400 text-center">
