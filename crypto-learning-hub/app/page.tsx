@@ -5,10 +5,11 @@ import { motion } from "framer-motion";
 import { FaBitcoin, FaEthereum, FaCoins } from "react-icons/fa";
 import CryptoCard from "@/components/CryptoCard";
 
-// Define a type for the crypto data
+// Define the correct type for CryptoPrice
 interface CryptoPrice {
   symbol: string;
-  price: number;
+  name: string; // Ensure name is defined here
+  price: string; // price should be a string according to the error
   change: number;
 }
 
@@ -16,7 +17,7 @@ export default function HomePage() {
   const [cryptoPrices, setCryptoPrices] = useState<CryptoPrice[]>([]);
 
   useEffect(() => {
-    // Fetching the live crypto prices from the backend API
+    // Fetch the live crypto prices
     fetch("/api/gemini")
       .then((res) => res.json())
       .then((data) => setCryptoPrices(data))
@@ -102,7 +103,7 @@ export default function HomePage() {
             cryptoPrices.map((crypto, index) => (
               <motion.div
                 key={crypto.symbol || index}
-                whileHover={{ scale: 1.05 }}
+                whileHover={{ scale: 1.05, opacity: 0.9, y: -5 }} // New hover effects
               >
                 <CryptoCard crypto={crypto} />
               </motion.div>
