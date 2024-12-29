@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { FaHome, FaGraduationCap, FaUsers, FaCertificate } from "react-icons/fa";
 import { HiMenu, HiX } from "react-icons/hi";
+import Link from "next/link";
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -28,24 +29,24 @@ export default function Navbar() {
         {/* Desktop menu */}
         <ul className="hidden md:flex space-x-6 items-center">
           <li>
-            <a href="/" className="flex items-center text-white hover:text-gray-400">
+            <Link href="/" className="flex items-center text-white hover:text-gray-400">
               <FaHome className="mr-2" /> Home
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="/learn" className="flex items-center text-white hover:text-gray-400">
+            <Link href="/learn" className="flex items-center text-white hover:text-gray-400">
               <FaGraduationCap className="mr-2" /> Learn
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="/community" className="flex items-center text-white hover:text-gray-400">
+            <Link href="/community" className="flex items-center text-white hover:text-gray-400">
               <FaUsers className="mr-2" /> Community
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="/certifications" className="flex items-center text-white hover:text-gray-400">
+            <Link href="/certifications" className="flex items-center text-white hover:text-gray-400">
               <FaCertificate className="mr-2" /> Certifications
-            </a>
+            </Link>
           </li>
         </ul>
       </div>
@@ -54,24 +55,24 @@ export default function Navbar() {
       {isMenuOpen && (
         <ul className="flex flex-col space-y-4 mt-4 md:hidden">
           <li>
-            <a href="/" className="flex items-center text-white hover:text-gray-400">
+            <Link href="/" className="flex items-center text-white hover:text-gray-400">
               <FaHome className="mr-2" /> Home
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="/learn" className="flex items-center text-white hover:text-gray-400">
+            <Link href="/learn" className="flex items-center text-white hover:text-gray-400">
               <FaGraduationCap className="mr-2" /> Learn
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="/community" className="flex items-center text-white hover:text-gray-400">
+            <Link href="/community" className="flex items-center text-white hover:text-gray-400">
               <FaUsers className="mr-2" /> Community
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="/certifications" className="flex items-center text-white hover:text-gray-400">
+            <Link href="/certifications" className="flex items-center text-white hover:text-gray-400">
               <FaCertificate className="mr-2" /> Certifications
-            </a>
+            </Link>
           </li>
         </ul>
       )}
