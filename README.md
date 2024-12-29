@@ -23,7 +23,7 @@ This platform is designed to help beginners learn about cryptocurrency, blockcha
 
 ## Project Structure
 
-The project is organized as follows:
+![Educational Crypto Learning Hub](structure.png)
 
 
 ## Setup Instructions
